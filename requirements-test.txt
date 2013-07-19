@@ -1,0 +1,10 @@
+d2to1
+coverage
+mock
+nose
+nosexcover
+webtest
+waitress
+yanc
+mysql-python
+pyramid
