@@ -17,3 +17,6 @@ local scoped sessions as recommended in sqlalchemy documentation:
     framework."
 
     -- http://docs.sqlalchemy.org/en/rel_0_8/orm/session.html
+
+
+Source code available on https://github.com/hadrien/pyramid_sqlalchemy_utility
