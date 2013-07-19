@@ -1,5 +1,5 @@
-Development
------------
+0.0.1
+-----
 
 * directive `config.get_sqalchemy_utility` to access utility.
 * `utility.engine` to access built engine
