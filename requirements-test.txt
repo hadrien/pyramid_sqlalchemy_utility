@@ -6,5 +6,4 @@ nosexcover
 webtest
 waitress
 yanc
-mysql-python
 pyramid
