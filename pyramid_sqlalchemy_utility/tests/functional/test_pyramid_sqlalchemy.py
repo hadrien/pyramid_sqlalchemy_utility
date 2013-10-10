@@ -21,12 +21,19 @@ class Test(unittest.TestCase):
         Base.metadata.drop_all(utility.engine)
         cls.sqla_utility.engine.pool.dispose()
 
+    def setUp(self):
+        from example import User
+        sqla_session = self.sqla_utility.session_cls()
+        sqla_session.add(User(name='unique_name'))
+        sqla_session.commit()
+        sqla_session.close()
+
     def tearDown(self):
         from example import User
         sqla_session = self.sqla_utility.session_cls()
         sqla_session.query(User).delete()
         sqla_session.commit()
-        sqla_session.close()
+        sqla_session.close_all()
 
     @classmethod
     def get_example_config(cls):
@@ -47,3 +54,9 @@ class Test(unittest.TestCase):
         self.assertIsNotNone(user)
 
         sqla_session.close()
+
+    def test_integrity_error(self):
+        "test integrity error on column uniqueness"
+        from sqlalchemy.exc import IntegrityError
+        with self.assertRaises(IntegrityError):
+            self.app.post('/users', params={'name': 'unique_name'})

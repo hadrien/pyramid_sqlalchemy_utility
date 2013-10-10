@@ -1,5 +1,8 @@
-Development
------------
+0.1
+---
+
+* `utility.new_session` to create a session.
+* Add exception handling when commit fail.
 
 
 0.0.1
