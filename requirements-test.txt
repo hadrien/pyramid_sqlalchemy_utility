@@ -7,3 +7,4 @@ webtest
 waitress
 yanc
 pyramid
+coveralls

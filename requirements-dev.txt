@@ -1,4 +1,14 @@
--r requirements-test.txt
 
 sphinx
 ipdb
+
+d2to1
+coverage
+mock
+nose
+nosexcover
+webtest
+waitress
+yanc
+pyramid
+coveralls

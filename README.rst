@@ -1,6 +1,15 @@
 pyramid_sqlalchemy_utility
 ==========================
 
+.. image:: https://travis-ci.org/hadrien/pyramid_sqlalchemy_utility.png?branch=master
+   :target: https://travis-ci.org/hadrien/pyramid_sqlalchemy_utility
+
+.. image:: https://coveralls.io/repos/hadrien/pyramid_sqlalchemy_utility/badge.png
+   :target: https://coveralls.io/r/hadrien/pyramid_sqlalchemy_utility
+
+.. image:: https://pypip.in/d/pyramid_sqlalchemy_utility/badge.png
+   :target: https://crate.io/packages/pyramid_sqlalchemy_utility/
+
 A simple pyramid extension which register a sqlalchemy utility. It add a
 `sqla_session` property to request object. Session is opened at first access
 and automatically commited and closed on request's finished callback.
